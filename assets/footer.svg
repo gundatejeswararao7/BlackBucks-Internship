@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 180" width="1200" height="180" role="img" aria-label="Footer">
+<defs><linearGradient id="fg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#232F3E"/><stop offset="1" stop-color="#1b2b44"/></linearGradient></defs>
+<clipPath id="cp"><rect width="1200" height="180" rx="22"/></clipPath><rect width="1200" height="180" rx="22" fill="url(#fg)"/><g clip-path="url(#cp)" transform="translate(0,34)">
+<path d="M0 120C150 90 300 150 450 120S750 90 900 120 1100 140 1200 110V180H0z" fill="#FF9900" fill-opacity="0.22"><animate attributeName="d" dur="7s" repeatCount="indefinite" values="M0 120C150 90 300 150 450 120S750 90 900 120 1100 140 1200 110V180H0z;M0 110C150 140 300 90 450 120S750 150 900 115 1100 95 1200 120V180H0z;M0 120C150 90 300 150 450 120S750 90 900 120 1100 140 1200 110V180H0z"/></path>
+<path d="M0 140C200 115 350 165 600 140S1000 115 1200 140V180H0z" fill="#2D8CFF" fill-opacity="0.22"><animate attributeName="d" dur="9s" repeatCount="indefinite" values="M0 140C200 115 350 165 600 140S1000 115 1200 140V180H0z;M0 140C200 165 350 115 600 140S1000 165 1200 140V180H0z;M0 140C200 115 350 165 600 140S1000 115 1200 140V180H0z"/></path>
+</g><text x="600" y="60" font-family="'Segoe UI',Roboto,Arial,sans-serif" font-size="28" font-weight="800" fill="#fff" text-anchor="middle" >Built with care on AWS</text>
+<text x="600" y="92" font-family="'Segoe UI',Roboto,Arial,sans-serif" font-size="15" font-weight="400" fill="#C9D4E5" text-anchor="middle" >Designed to fail gracefully and recover on its own.</text>
+<text x="600" y="124" font-family="'Segoe UI',Roboto,Arial,sans-serif" font-size="14" font-weight="700" fill="#FF9900" text-anchor="middle" >Gunda Tejeswara Rao  ·  CSE-IoT</text>
+</svg>

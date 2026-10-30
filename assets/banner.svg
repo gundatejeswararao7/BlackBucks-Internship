@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Self-Healing and Scalable Web Infrastructure on AWS">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f1722"/><stop offset="0.55" stop-color="#232F3E"/><stop offset="1" stop-color="#1b2b44"/></linearGradient>
+<linearGradient id="ttl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FF9900"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#FF9900" stop-opacity="0.55"/><stop offset="1" stop-color="#FF9900" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity="0.05"/></pattern>
+</defs>
+<rect width="1200" height="320" rx="22" fill="url(#bg)"/><rect width="1200" height="320" rx="22" fill="url(#grid)"/>
+<circle cx="980" cy="90" r="190" fill="url(#glow)"><animate attributeName="r" values="170;215;170" dur="6s" repeatCount="indefinite"/></circle>
+<circle cx="120" cy="300" r="140" fill="url(#glow)" opacity="0.5"><animate attributeName="r" values="120;160;120" dur="7s" repeatCount="indefinite"/></circle>
+<g opacity="0.9">
+<g><path d="M930 150a34 34 0 0 1 66-12a28 28 0 0 1 8 55H946a24 24 0 0 1-16-43z" fill="#fff" fill-opacity="0.10" stroke="#FF9900" stroke-width="2"/><animateTransform attributeName="transform" type="translate" values="0 0;22 -8;0 0" dur="7s" repeatCount="indefinite"/></g>
+<g><path d="M1030 215a24 24 0 0 1 46-8a20 20 0 0 1 6 38h-46a17 17 0 0 1-6-30z" fill="#fff" fill-opacity="0.08" stroke="#2D8CFF" stroke-width="2"/><animateTransform attributeName="transform" type="translate" values="0 0;-18 6;0 0" dur="9s" repeatCount="indefinite"/></g>
+</g>
+<g stroke="#FF9900" stroke-width="2" fill="none" stroke-dasharray="6 8" opacity="0.8">
+<path d="M880 260H1130"><animate attributeName="stroke-dashoffset" values="0;-28" dur="1.2s" repeatCount="indefinite"/></path></g>
+<g><circle cx="900" cy="260" r="9" fill="#2ECC71"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/></circle><circle cx="1010" cy="260" r="9" fill="#2ECC71"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="0.5s" repeatCount="indefinite"/></circle><circle cx="1120" cy="260" r="9" fill="#FF9900"><animate attributeName="opacity" values="1;0.3;1" dur="1.6s" begin="1s" repeatCount="indefinite"/></circle></g>
+<text x="60" y="78" font-family="'Segoe UI',Roboto,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="4" fill="#FF9900">CLOUD COMPUTING PROJECT</text>
+<text x="60" y="140" font-family="'Segoe UI',Roboto,Arial,sans-serif" font-size="52" font-weight="800" fill="url(#ttl)">Self-Healing &amp; Scalable</text>
+<text x="60" y="202" font-family="'Segoe UI',Roboto,Arial,sans-serif" font-size="52" font-weight="800" fill="#fff">Web Infrastructure on AWS</text>
+<text x="60" y="244" font-family="'Segoe UI',Roboto,Arial,sans-serif" font-size="20" fill="#C9D4E5">Application Load Balancer · Auto Scaling · EC2 · CloudWatch</text>
+<g font-family="'Segoe UI',Roboto,Arial,sans-serif" font-size="14" font-weight="700">
+<rect x="60" y="264" width="136" height="30" rx="15" fill="#FF9900"/><text x="128" y="284" fill="#232F3E" text-anchor="middle">High Availability</text>
+<rect x="208" y="264" width="126" height="30" rx="15" fill="none" stroke="#2D8CFF" stroke-width="2"/><text x="271" y="284" fill="#fff" text-anchor="middle">Fault Tolerant</text>
+<rect x="346" y="264" width="96" height="30" rx="15" fill="none" stroke="#2ECC71" stroke-width="2"/><text x="394" y="284" fill="#fff" text-anchor="middle">Elastic</text>
+</g></svg>
