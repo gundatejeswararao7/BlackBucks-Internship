@@ -110,43 +110,43 @@ All screenshots are from the working deployment in the AWS Console (**US East (O
 
 ### 1️⃣ Target Group registration and health checks
 
-<p align="center"><img src="assets/screenshots/01-targets_initial.svg" width="90%" alt="Targets in Initial state"/></p>
+<p align="center"><img src="assets/01-targets_initial.svg" width="90%" alt="Targets in Initial state"/></p>
 
 **Targets registered, status Initial.** The target group `HA-Project-TG` lists two targets on port 80: `i-0cd003dc03185963b` (WebServer-2, `us-east-2b`) and `i-0b6beb49b30eb8faf` (WebServer-1, `us-east-2a`). *Initial* means the load balancer has just registered them and is still running the first health checks. No traffic is sent until they pass.
 
-<p align="center"><img src="assets/screenshots/02-tg_summary.svg" width="90%" alt="Target group summary"/></p>
+<p align="center"><img src="assets/02-tg_summary.svg" width="90%" alt="Target group summary"/></p>
 
 **Target group summary.** Total targets 2, Healthy 0, Unhealthy 0, Initial 2. The group is attached to the load balancer `HA-Project-ALB`. This is the starting state before the checks complete.
 
-<p align="center"><img src="assets/screenshots/03-targets_healthy.svg" width="90%" alt="Both targets healthy"/></p>
+<p align="center"><img src="assets/03-targets_healthy.svg" width="90%" alt="Both targets healthy"/></p>
 
 **Both targets Healthy.** After a few check cycles both instances turn **Healthy** (green tick). This proves Nginx on each server answers the health check on port 80, and that the two servers sit in two different Availability Zones, so there is no single point of failure. The load balancer now sends traffic to both.
 
 ### 2️⃣ Application Load Balancer
 
-<p align="center"><img src="assets/screenshots/04-alb_provisioning.svg" width="90%" alt="ALB provisioning"/></p>
+<p align="center"><img src="assets/04-alb_provisioning.svg" width="90%" alt="ALB provisioning"/></p>
 
 **Provisioning.** `HA-Project-ALB` is an *application* load balancer, *internet-facing*, using IPv4. AWS is still creating its nodes in the chosen subnets.
 
-<p align="center"><img src="assets/screenshots/05-alb_active_list.svg" width="90%" alt="ALB active"/></p>
+<p align="center"><img src="assets/05-alb_active_list.svg" width="90%" alt="ALB active"/></p>
 
 **Active.** Once provisioning finishes, the state changes to **Active**. Only an active load balancer can accept and forward requests.
 
-<p align="center"><img src="assets/screenshots/06-alb_details.svg" width="90%" alt="ALB details"/></p>
+<p align="center"><img src="assets/06-alb_details.svg" width="90%" alt="ALB details"/></p>
 
 **Load balancer details.** Type Application, scheme Internet-facing, status Active, IPv4, VPC `vpc-06042964314e9d02f`, created on 5 September 2026. It spans two Availability Zones, `us-east-2a` (use2-az1) and `us-east-2b` (use2-az2), each with its own subnet. Spreading the ALB over two zones is what lets the system survive the loss of a whole zone. Its **DNS name** (`HA-Project-ALB-1410117085.us-east-2.elb.amazonaws.com`) is the public address of the application.
 
-<p align="center"><img src="assets/screenshots/07-alb_dns.svg" width="90%" alt="ALB DNS and listener"/></p>
+<p align="center"><img src="assets/07-alb_dns.svg" width="90%" alt="ALB DNS and listener"/></p>
 
 **DNS name and listener.** The DNS name is copied so it can be pasted into a browser. The *Listeners and rules* tab shows one listener that accepts HTTP and forwards to the target group `HA-Project-TG`.
 
 ### 3️⃣ The web application through the load balancer
 
-<p align="center"><img src="assets/screenshots/08-server1.svg" width="90%" alt="Output from server 1"/></p>
+<p align="center"><img src="assets/08-server1.svg" width="90%" alt="Output from server 1"/></p>
 
 **Response from Server 1.** Opening the ALB DNS name in the browser (marked "Not secure" because the demo uses plain HTTP) returns **"Hello from Server 1 - AZ-A"** from `WebServer-1` in `us-east-2a`, status *Healthy and Running*. The URL is the load balancer, not an individual server.
 
-<p align="center"><img src="assets/screenshots/09-server2.svg" width="90%" alt="Output from server 2"/></p>
+<p align="center"><img src="assets/09-server2.svg" width="90%" alt="Output from server 2"/></p>
 
 **Response from Server 2.** Refreshing the same URL returns **"Hello from Server 2 - AZ-B"** from `WebServer-2` in `us-east-2b`. The page colour also changes (blue for Server 1, orange for Server 2), so the switch between servers is easy to see.
 
